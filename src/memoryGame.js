@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import GameOver from "./components/GameOver";
+import React, { useState } from 'react';
+import GameOver from './components/GameOver';
 
 export default function MemoryGame(text, props) {
 
