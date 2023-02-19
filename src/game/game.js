@@ -42,7 +42,7 @@ let game = {
     },
 
     checkGameOver: function() {
-        return this.cards.filter(card=>!card.flipped).length == 0;
+        return this.cards.filter(card=>!card.flipped).length === 0;
     },
 
     techs: [
@@ -69,6 +69,8 @@ let game = {
 
         this.cards = this.cards.flatMap(pair => pair)
         this.shuffleCards();
+
+        return this.cards
     },
 
     createPairFromTech: function (tech) {
