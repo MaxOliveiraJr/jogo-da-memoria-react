@@ -1,13 +1,13 @@
 import React from 'react'
 import CardElement from './CardElement';
 
-export default function GameBoard({ cards }) {
+export default function GameBoard({ cards, onHandleFlip }) {
  
 
     return (
         <div id='gameBoard'>
             {
-                cards.map((card, index) => <CardElement key={index} card={card}></CardElement>)
+                cards?.map((card, index) => <CardElement onHandleFlip={onHandleFlip} key={index} card={card}></CardElement>)
             }
         </div>
     )

@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function CardElement({card}) {
+export default function CardElement({ card, onHandleFlip }) {
     return (
-        <div id={card.id} className='card flip'>
+        <div onClick={() => onHandleFlip(card)} id={card.id} className={`card${card.flipped ? ' flip' : ''}`}>
             <div className='card_front'>
                 <img className='icon' src={`assets/images/${card.icon}.png`} alt={card.icon}></img>
             </div>
